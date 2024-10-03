@@ -44,11 +44,5 @@ jobs:
         project_id: ${{ secrets.GCP_PROJECT_ID }}
         service_account_key: ${{ secrets.GCP_SA_KEY }}
 
-    - name: Login To Google Cloud
-      run: gcloud auth login
-
-    - name: GCloud verification
-      run : 4/0AVG7fiSDk7o2WJdNT519jMEOpR2V3p7ewX-OFtW1DvK8U4oGzmONaSkI-Z-0AwaoR_Joeg
-
     - name: Deploy to Google App Engine
       run: gcloud app deploy --quiet
