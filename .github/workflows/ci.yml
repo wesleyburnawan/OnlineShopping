@@ -44,5 +44,8 @@ jobs:
         project_id: ${{ secrets.GCP_PROJECT_ID }}
         service_account_key: ${{ secrets.GCP_SA_KEY }}
 
+    - name: Login To Google Cloud
+      run: gcloud auth login
+      
     - name: Deploy to Google App Engine
       run: gcloud app deploy --quiet
